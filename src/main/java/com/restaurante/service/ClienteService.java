@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService {
@@ -18,6 +19,10 @@ public class ClienteService {
 
     public List<Cliente> obtenerClientes() {
         return clienteRepository.findAll();
+    }
+
+    public Optional<Cliente> obtenerPorId(Long id) {
+        return clienteRepository.findById(id);
     }
 
     public Cliente guardarCliente(Cliente cliente) {
