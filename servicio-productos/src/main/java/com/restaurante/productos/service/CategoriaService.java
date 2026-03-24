@@ -1,10 +1,10 @@
-package com.restaurante.service;
+package com.restaurante.productos.service;
 
 import org.springframework.stereotype.Service;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.restaurante.repository.CategoriaRepository;
-import com.restaurante.model.Categoria;
+import java.util.List;
+import com.restaurante.productos.repository.CategoriaRepository;
+import com.restaurante.productos.model.Categoria;
 
 @Service
 public class CategoriaService {
@@ -18,5 +18,13 @@ public class CategoriaService {
 
     public Categoria guardar(Categoria c){
         return repo.save(c);
+    }
+
+    public void eliminar(Long id){
+        repo.deleteById(id);
+    }
+
+    public Categoria obtenerPorId(Long id){
+        return repo.findById(id).orElse(null);
     }
 }
