@@ -1,7 +1,7 @@
-package com.restaurante.service;
+package com.restaurante.pagos.service;
 
-import com.restaurante.model.MetodoDePago;
-import com.restaurante.repository.MetodoDePagoRepository;
+import com.restaurante.pagos.model.MetodoDePago;
+import com.restaurante.pagos.repository.MetodoDePagoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
