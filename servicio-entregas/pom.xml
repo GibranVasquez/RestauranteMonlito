@@ -10,6 +10,7 @@
         <groupId>com.restaurante</groupId>
         <artifactId>restaurante-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom-parent.xml</relativePath>
     </parent>
 
     <artifactId>servicio-entregas</artifactId>
